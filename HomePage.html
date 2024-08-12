@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="website icon" href="./img/logo.png" />
+    <script async src="./script.js"></script>
+    <script async src="./sw.js"></script>
+    <script async src="https://kit.fontawesome.com/12dd6b153a.js" crossorigin="anonymous"></script>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+           navigator.serviceWorker
+           .register('/sw.js')
+           .then(function() {
+               console.log('Service worker registered!'); // test
+           });
+       }
+    </script>
+ 
+    <title>HomePage</title>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="menu_flex">
+            <div class="logo" alt="logo">
+                <div class="burger" id="burger">
+                    <span></span>
+                </div>   
+            </div>        
+            <div class="menu">
+                <div class="search">
+                    <input type="search" placeholder="Search">
+                    <img src="./img/ico_search.png" alt="">
+                </div>
+
+                <ul id="under_header" class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="./Tomato_all.html">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">R & D</a></li>
+                    <li><a href="./Contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu_content">
+            <p class="logo_placeholder">Agridera Seeds and Agriculture Ltd</p>
+            <button>Read me</button>
+            <button class="subscribe-for-push">SUBSCRIBE FOR PUSH NOTIFICATIONS</button>
+        </div>
+
+    </div>
+    <div class="under_menu">
+        <figure>
+            <img src="./img/koloc.png" alt="">
+            <figcaption>Wheat</figcaption>
+        </figure>
+        <figure>
+            <img src="./img/melon.png" alt="">
+            <figcaption>Confection Watermelon</figcaption>
+        </figure>
+        <figure>
+            <img src="./img/Klever.png" alt="">
+            <figcaption>Clover</figcaption>
+        </figure>
+        <figure>
+            <img src="./img/Sunflower.png" alt="">
+            <figcaption>CONFECTION Sunflower</figcaption>
+        </figure>
+        <figure>
+            <img src="./img/tomato.png" alt="">
+            <figcaption>Tomato</figcaption>
+        </figure>
+        <figure>
+            <img src="./img/Eggplant.png" alt="">
+            <figcaption>Eggplant P/O</figcaption>
+        </figure>
+        <figure>
+            <img src="./img/last_Sunflower.png" alt="">
+            <figcaption>Ornamental Sunflower</figcaption>
+        </figure>
+    </div>
+    <div class="content_first">
+        <div class="bg_content">
+            <div id="block_first">
+                <div id="block_first_first">
+                    <h1>Vision</h1>
+                    <img src="./img/Сross.png" alt="">
+                    <p>We believe in long-term growth with an emphasis on the potential of emerging markets.
+                        We also support the global need of feeding the growing population.</p>
+                </div>
+                <img id="first_img" src="./img/first_content_right.png" alt="">
+            </div>
+
+            <div id="block_second">
+                <div id="img_content_second">
+                    <div id="white_sircle">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div id="block_second_first">
+                    <h1>Mission</h1>
+                    <img src="./img/Сross.png" alt="">
+                    <p>Breeding and marketing seeds for advanced field crops and
+                        vegetable varieties that provide an added value to all supply chain partners.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="content_second">
+        <h1>AGRIDERA’S MAIN ACTIVITIES</h1>
+        <img src="./img/Сross.png" alt="">
+        <div id="content_second_block">
+            <div>
+                <figure>
+                    <img src="./img/Сotton.png" alt="">
+                    <figcaption>Open field crop seeds</figcaption>
+                </figure>
+                <hr>
+                <p id="figure_1">wheat, cotton, legumes,
+                    hybrid confection sunflower</p>
+            </div>
+            <div>
+                <figure>
+                    <img src="./img/Tommato.png" alt="">
+                    <figcaption>Vegetable seeds</figcaption>
+                </figure>
+                <hr>
+                <p id="figure_2">hybrid open field tomatoes,
+                    eggplant, onion, paprika, etc.</p>
+            </div>
+            <div>
+                <figure>
+                    <img src="./img/Sunflow.png" alt="">
+                    <figcaption>Ornamental seeds</figcaption>
+                </figure>
+                <hr>
+                <p id="figure_3">hybrid cut sunflowers, hybrid
+                    patio tomatoes, Bells of Irland, etc.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer_first">
+            <div>
+               <ul>
+                <li>Profile</li>
+                <li>Managment</li>
+                <li>Products</li>
+                <li>R&D</li>
+                <li>Links</li>
+                <li>Sitemap</li>
+                <li>Contact</li>
+            </ul> 
+            </div>
+            
+            <div>
+                <a href="#"><img src="./img/linkedin 5 4.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_inst.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_tube.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_tw.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_fb.png" alt=""></a>
+            </div>
+        </div>
+        <div id="footer_second">
+            <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+        </div>
+    </footer>
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

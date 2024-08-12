@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link rel="website icon" href="./img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+    <script async src="https://kit.fontawesome.com/12dd6b153a.js" crossorigin="anonymous"></script>
+    
+    <title>Onion_all</title>
+</head>
+
+<body>
+    
+    <div class="Tomato_all_bg">
+        <div class="Tomato_all_menu_flex">
+            <div class="logo" alt="logo">
+                <div class="burger" id="burger">
+                    <span></span>
+                </div>  
+            </div>
+            <div class="menu">
+                <div class="search">
+                    <input type="search" placeholder="Search">
+                    <img src="./img/ico_search.png" alt="">
+                </div>
+
+                <ul id="under_header" class="nav-menu">
+                    <li><a href="./HomePage.html">Home</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="./Tomato_all.html">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">R & D</a></li>
+                    <li><a href="./Contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="onion_parent">
+            <img id="onion" src="./img/bg_bg.png" alt="">
+        </div>
+        
+    </div>
+    <div class="Tomato_all_main_content" v-if="products" v-for="p in products">
+        <h1>Agridera Fresh Market Onions Hybrids</h1>
+        <img src="./img/Сross.png" alt="">
+        <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of Onion
+            seeds. We invest intensively in research and development to provide solutions to growers and consumers in
+            numerous countries around the world.
+            In particular, we breed improved disease-resistant cultivars adapted to different markets globally.
+            <br>
+            <br>
+            Currently, emphasis is placed on combining Onion Yellow Leaf Curl Virus (TYLCV) and Onion Spotted Wilt
+            Virus (TSWV) resistances with other soil borne diseases into superior Onion breeding lines and hybrids.
+            Moreover, comprehensive efforts are being undertaken to develop varieties resistance to TBRFV virus (Onion
+            Brown Rugose Fruit Virus).
+            <br>
+            <br>
+            In terms of horticultural traits, breeding is for earliness, different fruit sizes, firmness, red fruit
+            color, flavor, crack resistance, shelf life, and high/low temperature fruit set. Combinations of quality
+            features and disease resistance are sought in a variety of types, namely round and elongated shapes.
+        </p>
+        <div id="border_text">
+            Agirdera Onion breeding programs are focusing on three main segments: Greenhouse Indeterminate Onions,
+            Open-field Indeterminate Onions, and Bush Type Open-field Onions.
+        </div>
+        <div class="sort_tomato">
+            <div id="sort_1">
+                <h5><b>Greenhouse Onion Breeding Program</b></h5>
+                <hr>
+                <p><b>This breeding is aimed for the Spanish and Turkish markets.</b>For single and cluster picks, round
+                    fruit shape and resistances of TYLCV, TSWV, Nematodes and FORL (Fusarium oxysporum f.sp.
+                    radicis-lycopersici). Some hybrids may include more resistances, such as Cladosporium and Leveillula
+                    Taurica (Lv). </p>
+            </div>
+            <div id="sort_2">
+                <h5><b>Open-field Indeterminate Onions</b></h5>
+                <hr>
+                <p><b>This breeding is for Brazilian, Moroccan, and Turkish markets.</b> The main focus is on large
+                    round shape fruits (200 grams plus); and resistances of TYLCV, TSWV, Nematodes and FORL. In the near
+                    future, F3 (Fusarium oxysporum f.sp. lycopersici) will be included as basic resistance in our
+                    cultivars.</p>
+            </div>
+            <div id="sort_3">
+                <h5><b>Open-field Bush Type Onions</b></h5>
+                <hr>
+                <p><b>This breeding is for Mediterranean markets.</b>We breed round and elongated shapes, standard sizes
+                    (140- 180 grams), and beef sizes (min. 180 grams up to 300 grams and more). We combine the
+                    resistances of TYLCV, TSWV and Nematodes as basic resistances in our hybrids. However, some hybrids
+                    may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).</p>
+            </div>
+
+        </div>
+
+        <div id="border_text_second">
+            Agirdera Onion breeding programs are focusing on three main segments: Greenhouse Indeterminate Onions,
+            Open-field Indeterminate Onions, and Bush Type Open-field Onions.
+        </div>
+        
+        <div class="onion_img">
+            
+            <figure v-for="p in products" v-bind:id="p.id">
+                <div>
+                <a :href=" 'Tomato_one.html#' +p.id ">
+                    <p id="figcaption_first">{{ p.title }}</p>
+                </a>
+                <a :href="'Tomato_one.html#' +p.id">
+                    <p id="figcaption_second">{{ p.short_text }}</p>
+                </a>
+                </div>
+            </figure>
+            
+            <!-- <figure id="onion_2">
+                <div><p id="figcaption_first">TAG 1001 (TAG 855)</p>
+                <p id="figcaption_second"> Onion Determinate Red Standard Round</p>
+            </div>
+            
+            </figure>
+            <a href="./Tomato_one.html">
+            <figure id="onion_3">
+                <div>
+                <p id="figcaption_first">TAG 1002 (TAG 809)</p>
+                <p id="figcaption_second">Onion Determinate Red Standard Round</p>    
+                </div>
+                
+
+            </figure>
+            </a>
+            <figure id="onion_4">
+                <div>
+                <p id="figcaption_first">TAG 1003 (TAG 834 )</p>
+                <p id="figcaption_second">Onion Determinate Red Standard Round</p>
+                </div>
+                
+            </figure>
+            <figure id="onion_5">
+                <div>
+                <p id="figcaption_first">TAG 1004 (TAG 848)</p>
+                <p id="figcaption_second">Onion Determinate Red BEEF Round</p>    
+                </div> -->
+                
+
+            <!--</figure>
+            <figure id="onion_6">
+                <div>
+                <p id="figcaption_first">TAG 1005 (TAG 800)</p>
+                <p id="figcaption_second">Onion Determinate Red Standard Round</p>   
+                </div>
+               
+
+            </figure>
+            <figure id="onion_7">
+                <div>
+                 <p id="figcaption_first">TAG 1006 (TAG 898)</p>
+                <p id="figcaption_second">Onion Determinate Red Elongated</p>   
+                </div>
+                
+            </figure>
+            <figure id="onion_8">
+                <div>
+                 <p id="figcaption_first">TAG 1007 (TAG 816)</p>
+                <p id="figcaption_second">Onion Determinate Red Elongated</p>   
+                </div> 
+                
+            </figure>-->
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div id="footer_first">
+            <div>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Managment</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">R&D</a></li>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="#"><img src="./img/linkedin 5 4.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_inst.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_tube.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_tw.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_fb.png" alt=""></a>
+            </div>
+        </div>
+        <div id="footer_second">
+            <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>

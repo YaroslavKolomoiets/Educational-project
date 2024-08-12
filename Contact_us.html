@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="website icon" href="./img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./responsive.css">
+    <script async src="./script.js"></script>
+    <script async src="https://kit.fontawesome.com/12dd6b153a.js" crossorigin="anonymous"></script>
+    <title>Tomato_all</title>
+</head>
+
+<body>
+    <div class="Tomato_all_bg">
+        <div class="Tomato_all_menu_flex">
+            <div class="logo" alt="logo">
+                <div class="burger" id="burger">
+                    <span></span>
+                </div>
+            </div>
+            
+            <div class="menu">
+                <div class="search">
+                    <input type="search" placeholder="Search">
+                    <img src="./img/ico_search.png" alt="">
+                </div>
+                
+                <ul class="nav-menu" id="under_header">
+                    <li><a href="./HomePage.html">Home</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="./Tomato_all.html">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">R & D</a></li>
+                    <li><a href="./Contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <img id="tomato" src="./img/contact_us_under.png" alt="">
+    </div>
+    <div class="Contact_us_main_content">
+        <h1>Contact us</h1>
+        <img src="./img/Сross.png" alt=""> <br>  
+
+
+        <table v-if="card!=''" class="ContactTable">
+            <tr>
+                <th>Photo</th>
+                <th>Product Name </th>
+                <th>Description</th>
+                <th>Options</th>
+            </tr>
+            <tr v-for="c in card">
+                <td><img class="ImgTableContact"
+                        :src="'./img/'+c.image" alt=""></td>
+                <td>{{ c.title }}</td>
+                <td>{{ c.desc }}</td>
+                <td><a href="#" @click.prevent="removeFromCard(c.id)">X</a></td>
+            </tr>
+        </table>
+
+
+        <form id="Contact_us_form" action="#">
+            <div id="Contact_us_form_first">
+                
+            <label for="name">Name *</label> <br>
+            <input type="text" id="name" name="name" required> <br>
+
+            <label for="name">Company Name</label> <br>
+            <input type="text" id="name" name="name"> <br>
+
+            <label for="name">Position</label> <br>
+            <input type="text" id="name" name="name"> <br>
+
+            <label for="name">City</label> <br>
+            <input type="text" id="name" name="name"> <br>
+
+            <label for="name">Country</label> <br>
+            <input type="text" id="name" name="name"> <br>
+
+            <label for="name">Telephone</label> <br>
+            <input type="tel" id="phone" name="phone" pattern="\(\d{3}\) \d{3}-\d{4}"> <br>
+
+            <label for="name">Email *</label> <br>
+            <input type="email" id="name" name="name" required>
+            </div>
+            <div id="Contact_us_form_second">
+                <label for="seeds">You are a</label> <br>
+                <select id="seeds" name="seeds">
+                <option value="seed_producer" selected>Seed producer</option>
+                <option value="client">Сlient</option>
+                <option value="consultation ">Consultation</option>
+                <option value="farmer ">Farmer </option>
+                </select>
+
+                <label for="Contact_label">You are interested in</label> <br>
+                <textarea name="Contact_label" id="Contact_label" cols="30" rows="10"></textarea>
+                <p>Please type this code</p>
+                <div id="Send_and_Captcha">
+                    <img src="./img/Captcha.png" alt="">
+                    <input type="text" id="" name="">
+                    <input type="submit" value="Send Message">
+                </div>
+            </div>
+        </form>
+        
+    </div>
+        <div id="top_footer">
+            <p id="first_p">Our Address</p>
+            <p id="second_p">AGRIDERA Seeds & Agriculture Ltd.
+                P.O Box 103,
+                Gedera 70750, Israel.
+                Telephone: <strong>+972 8 944 9222</strong></p>
+        </div>
+
+    <footer>
+        <div id="footer_first">
+            <div>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Managment</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">R&D</a></li>
+                    <li><a href="#">Links</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="#"><img src="./img/linkedin 5 4.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_inst.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_tube.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_tw.png" alt=""></a>
+                <a href="#"><img src="./img/Ico_fb.png" alt=""></a>
+            </div>
+        </div>
+        <div id="footer_second">
+            <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+        </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</body>
+
+</html>
